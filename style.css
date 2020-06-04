@@ -5,20 +5,30 @@ body{
   text-align: center;
   font-family: 'Oswald', Helvetica, sans-serif;
   font-size: 40px;
-  transform: skewY(-10deg);
   letter-spacing: 4px;
   word-spacing: -8px;
   color: tomato;
   text-shadow:
     -1px -1px 0 firebrick,
     -2px -2px 0 firebrick,
-    -3px -3px 0 firebrick,
-    -4px -4px 0 firebrick,
-    -5px -5px 0 firebrick,
-    -6px -6px 0 firebrick,
-    -7px -7px 0 firebrick,
-    -8px -8px 0 firebrick,
-    -30px 20px 40px dimgrey;
+     5px 4px 20px dimgrey;
+}
+
+#userinput {
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: #ddd 1px solid;
+  width:200px;
+}
+
+#userinput:focus{
+  outline: none;
+}
+
+#enter {
+   border: transparent;
+   background-color: transparent;
 }
 .list-wrap{
     text-align: center;
@@ -27,18 +37,43 @@ ul{
   list-style: none;
   display: inline-block;
   width:200px;
+  -webkit-padding-start:0px;
 }
 ul li{
-  padding: 5px;
+  padding: 10px 0 5px 0;
   text-align: left;
-}
-.done {
-  text-decoration: line-through;
+  position: relative;
+  border-bottom: orange solid 1px;
 }
 
-ul li.delete{
-  display: inline-block;
-  margin-left: auto;
-  margin-right:0;
-  
+.done {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+.doneTxt {
+  color: red;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 13px;
+}
+
+.delete{
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  background: transparent;
+  color: #6F808C;
+  border: 3px solid transparent;
+  border-left: 0px;
+  border-radius: 0 10px 10px 0;
+  transition: all .2s;
+}
+.delete:hover {
+  color: #A6BFD1;
+  cursor: pointer;
+}
+
+.delete:focus {
+  outline: none;
+
 }
